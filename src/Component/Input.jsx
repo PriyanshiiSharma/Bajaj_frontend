@@ -11,7 +11,7 @@ const InputForm = () => {
   const handleSubmit = async () => {
     try {
       const parsedData = JSON.parse(inputData);
-      const res = await axios.post("http://192.168.1.38:3500/bfhl", parsedData);
+      const res = await axios.post("https://bajaj-backend-xi-eosin.vercel.app/bfhl", parsedData);
       setResponse(res.data);
     } catch (error) {
       alert("Invalid JSON or API error.");
